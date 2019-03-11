@@ -4,66 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fno"
-        android:hint="Enter firstno"
-        android:inputType="numberDecimal"/>
-    <EditText
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sno"
-        android:hint="Enter firstno"
-        android:inputType="numberDecimal"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Subtract"
-        android:id="@+id/subtract"
-        android:layout_gravity="center_horizontal"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Multiply"
-        android:id="@+id/multiply"
-        android:layout_gravity="center_horizontal"
-
-
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Divide"
-        android:id="@+id/divide"
-        android:layout_gravity="center_horizontal"
-
-
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:id="@+id/add"
-        android:layout_gravity="center_horizontal"
-
-
-        />
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fno"
+            android:gravity="center"
+            android:hint="Enter firstno"
+            android:inputType="numberDecimal"/>
+        <EditText
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sno"
+            android:hint="Enter firstno"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
 
     <TextView
+        android:layout_marginRight="16dp"
+        android:text="Output"
         android:id="@+id/display"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
         android:layout_marginTop="16dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_weight="1"
+            android:id="@+id/subtract"
+            android:layout_gravity="center_horizontal"
+
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:layout_weight="1"
+            android:id="@+id/multiply"
+            android:layout_gravity="center_horizontal"
+
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:layout_weight="1"
+            android:id="@+id/divide"
+            android:layout_gravity="center_horizontal"
+
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_weight="1"
+            android:id="@+id/add"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+
 
 </LinearLayout>
