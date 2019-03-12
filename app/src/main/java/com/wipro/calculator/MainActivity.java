@@ -6,14 +6,16 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText num1, num2;
-    Button add, multiply, divide, subtract;
+    Button carChangeBtn,add, multiply, divide, subtract;
     TextView display;
-
+    ImageView car;
+    boolean carChange = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +51,22 @@ public class MainActivity extends AppCompatActivity {
                 multiply();
             }
         });
+        car = findViewById(R.id.imageView);
+        carChangeBtn = findViewById(R.id.car_change_btn);
 
+        carChangeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(carChange){
+                    car.setBackground(getResources().getDrawable(R.drawable.car_three));
+                    carChange = false;
+                }
+                else {
+                    car.setBackground(getResources().getDrawable(R.drawable.car_two));
+                    carChange = true    ;
+                }
+            }
+        });
     }
 
     public void add()
